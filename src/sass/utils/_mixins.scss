@@ -9,6 +9,21 @@
   @else { @warn "Breakpoint mixin supports: xs, sm, md, lg"; }
 }
 
+/// Wrap an element in a container
+/// @access public
+/// @param {Number} $max-width [rem(1240)] - container's max-width
+/// @param {String} $display [null] - display type. Display equals to
+/// 'inline-block', $center will not have effect
+/// @param {Boolean} $center [true] - center the container or not.
+@mixin container($max-width: rem(1240), $display: null, $center: true) {
+  display: $display;
+  max-width: $max-width;
+  @if $display != 'inline-block' and $center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 /// Padding in rem with shorthand or long syntax
 /// @access public
 /// @param {List} $paddings - values to be converted
@@ -24,7 +39,7 @@
     padding: $paddings;
   } @else {
     @for $i from 1 through length($paddings) {
-      @if nth($paddings, $i) != 'x' {
+      @if nth($paddings, $i) != x {
         padding-#{nth($orientations, $i)}: rem(nth($paddings, $i));
       }
     }
