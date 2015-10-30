@@ -200,8 +200,8 @@
 }
 
 
-@media (max-height: rem(500)) {
-  .transparency {
-    @include pad(190 x x x, false);
-  }
-}
+// @media (max-height: rem(500)) {
+//   .transparency {
+//     @include pad(190 x x x, false);
+//   }
+// }
