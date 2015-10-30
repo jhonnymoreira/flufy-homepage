@@ -1,4 +1,5 @@
 var nav__padding = function addPadding (nav, target) {
+  /* Get the elements */
   nav = document.querySelector(nav);
   target = document.querySelector(target);
 
@@ -11,6 +12,7 @@ var nav__padding = function addPadding (nav, target) {
     height: window.innerHeight
   };
 
+  /* On resize, update the values and do the check again */
   window.onresize = function updateValues () {
     navDimensions['height'] = nav.scrollHeight;
 
@@ -33,17 +35,20 @@ var nav__padding = function addPadding (nav, target) {
 }('.nav', '.transparency');
 
 var nav__scrollspy = function changeBackgroundColor (el, target, cl) {
-  /* Select the position of the 'target' element */
-  var targetPosition = document.querySelector(target).offsetTop;
-
-  /* Update 'el' to be the DOM element */
+  /* Update 'target' and 'el' to be the DOM element */
+  target = document.querySelector(target);
   el  = document.querySelector(el);
 
-  /* Update 'targetPosition' so it considers the 'el' height */
-  targetPosition -= el.scrollHeight;
+  /* Create 'targetPosition' to consider the 'el' height */
+  var targetPosition = target.offsetTop - el.scrollHeight;
+
+  /* On resize, update variables */
+  window.onresize = function updateValues () {
+    targetPosition = target.offsetTop - el.scrollHeight;
+  };
 
   /* While scrolling... */
-  window.onscroll = function () {
+  window.onscroll = function triggerChange () {
     /* Get the scroll coordinate */
     var scrollPosition = document.documentElement.scrollTop ||
                          document.body.scrollTop;
