@@ -1,117 +1,290 @@
-// .nav {
-//   position: fixed;
-//   text-align: center;
-//   background-color: $mine-shaft;
-//   transition: background $transition-properties;
-// }
-
-// .nav__logo--text {
-//   height: rem(41);
-//   font-size: rem(25);
-//   color: $white;
-//   line-height: rem(37);
-// }
-
-// .nav__highlight-item,
-// .nav__general-item {
-//   & > a {
-//     transition: color $transition-properties;
-//   }
-// }
-
-// .nav__highlight-item {
-//   font-size: rem(15);
-//   & > a {
-//     color: $nav-highlight__link;
-//     @include on-event {
-//       color: $nav-highlight__link-event;
-//     }
-//   }
-// }
-
-// .nav__general-item {
-//   font-size: rem(13);
-//   & > a {
-//     color: $nav-general__link;
-//     @include on-event {
-//       color: $nav-general__link-event;
-//     }
-//   }
-// }
-
-// .nav--light {
-//   background-color: $gallery;
-//   .nav__logo--text {
-//     color: rgba($mine-shaft, 0.7);
-//   }
-//   .nav__highlight-item > a {
-//     color: $nav-light-highlight__link;
-//     @include on-event {
-//       color: $nav-light-highlight__link-event;
-//     }
-//   }
-
-//   .nav__general-item > a {
-//     color: $nav-light-general__link;
-//     @include on-event {
-//       color: $nav-light-general__link-event;
-//     }
-//   }
-// }
-
-// @include breakpoint(xs) {
-//   .nav__logo {
-//     display: block;
-//   }
-
-//   .nav__logo--content {
-//     display: inline-block;
-//   }
-
-//   .nav__logo--img,
-//   .nav__logo--text {
-//     display: inline-block;
-//     vertical-align: middle;;
-//   }
-
-//   .nav__logo--img {
-//     margin-right: rem(10)
-//   }
-
-//   .nav__logo--text {
-//     line-height: 37px;
-//   }
-
-//   .nav__highlight {
-//     display: none;
-//     visibility: hidden;
-//   }
-
-//   .nav__general {
-//     margin-top: rem(10);
-//     margin-bottom: rem(10);
-//   }
-
-//   .nav__general-item,
-//   .nav__button {
-//     display: inline-block;
-//   }
-
-//   .nav__general-item {
-//     font-size: rem(18);
-//     &:not(:last-child) {
-//       margin-right: rem(5);
-//     }
-//   }
-
-//   .nav__button {
-//     &:not(:last-child) {
-//       margin-right: rem(10);
-//     }
-//   }
-// }
-
 .nav {
-  display: none;
-  visibility: hidden;
+  position: fixed;
+  z-index: 25;
+  width: 100%;
+  @include pad(30);
+  text-align: center;
+  background-color: $mine-shaft;
+  transition: background $transition-properties;
+}
+
+.nav__logo--text {
+  height: rem(41);
+  font-size: rem(25);
+  color: $white;
+  line-height: rem(37);
+}
+
+.nav__highlight-item,
+.nav__general-item {
+  & > a {
+    transition: color $transition-properties;
+  }
+}
+
+.nav__highlight-item {
+  font-size: rem(15);
+  & > a {
+    color: $nav-highlight__link;
+    @include on-event {
+      color: $nav-highlight__link-event;
+    }
+  }
+}
+
+.nav__general-item {
+  font-size: rem(13);
+  & > a {
+    color: $nav-general__link;
+    @include on-event {
+      color: $nav-general__link-event;
+    }
+  }
+}
+
+.nav--light {
+  background-color: $gallery;
+  .nav__logo--text {
+    color: rgba($mine-shaft, 0.7);
+  }
+  .nav__highlight-item > a {
+    color: $nav-light-highlight__link;
+    @include on-event {
+      color: $nav-light-highlight__link-event;
+    }
+  }
+
+  .nav__general-item > a {
+    color: $nav-light-general__link;
+    @include on-event {
+      color: $nav-light-general__link-event;
+    }
+  }
+}
+
+@include breakpoint(xs) {
+  .nav__logo {
+    display: block;
+  }
+
+  .nav__logo--img,
+  .nav__logo--text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav__logo--img {
+    margin-right: rem(10)
+  }
+
+  .nav__highlight {
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav__general {
+    margin-top: rem(10);
+    margin-bottom: rem(10);
+  }
+
+  .nav__general-item,
+  .nav__button {
+    display: inline-block;
+  }
+
+  .nav__general-item {
+    font-size: rem(18);
+    &:not(:last-child) {
+      margin-right: rem(5);
+    }
+  }
+
+  .nav__button {
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .nav__logo {
+    display: block;
+  }
+
+  .nav__logo--img,
+  .nav__logo--text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav__logo--img {
+    margin-right: rem(10)
+  }
+
+  .nav__highlight {
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav__general {
+    margin-top: rem(10);
+    margin-bottom: rem(10);
+  }
+
+  .nav__general-item,
+  .nav__button {
+    display: inline-block;
+  }
+
+  .nav__general-item {
+    font-size: rem(18);
+    &:not(:last-child) {
+      margin-right: rem(5);
+    }
+  }
+
+  .nav__button {
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .nav__logo,
+  .nav__logo--img,
+  .nav__logo--text,
+  .nav--wrapper {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav__logo {
+    margin-right: rem(60);
+  }
+
+  .nav__logo--img {
+    margin-right: rem(10)
+  }
+
+  .nav__highlight {
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav__general {
+    margin-top: rem(10);
+    margin-bottom: rem(10);
+  }
+
+  .nav__general-item,
+  .nav__button {
+    display: inline-block;
+  }
+
+  .nav__general-item {
+    font-size: rem(18);
+    &:not(:last-child) {
+      margin-right: rem(5);
+    }
+  }
+
+  .nav__button {
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  .nav__logo,
+  .nav--wrapper,
+  .nav__logo--img,
+  .nav__logo--text,
+  .nav__buttons,
+  .nav__general {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav__logo {
+    margin-right: rem(60);
+  }
+
+  .nav__logo--img {
+    margin-right: rem(10)
+  }
+
+  .nav__highlight {
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav__general {
+    margin-right: rem(30);
+  }
+
+  .nav__general-item,
+  .nav__button {
+    display: inline-block;
+  }
+
+  .nav__general-item {
+    font-size: rem(16);
+    &:not(:last-child) {
+      margin-right: rem(5);
+    }
+  }
+
+  .nav__button {
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+}
+
+@include breakpoint(xl) {
+  .nav__logo,
+  .nav--wrapper,
+  .nav__logo--img,
+  .nav__logo--text,
+  .nav__highlight,
+  .nav__general,
+  .nav__buttons {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav__logo {
+    margin-right: rem(30);
+  }
+
+  .nav__logo--img {
+    margin-right: rem(10)
+  }
+
+  .nav__highlight,
+  .nav__general {
+    margin-right: rem(30);
+  }
+
+  .nav__highlight-item,
+  .nav__general-item,
+  .nav__button {
+    display: inline-block;
+  }
+
+  .nav__highlight-item,
+  .nav__button {
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+
+  .nav__general-item {
+    font-size: rem(13);
+    &:not(:last-child) {
+      margin-right: rem(5);
+    }
+  }
 }

@@ -1,3 +1,4 @@
+.nav,
 .transparency,
 .features,
 .integration {
@@ -5,6 +6,10 @@
   &__container {
     @include clearfix();
   }
+}
+
+.nav--container {
+  @include container;
 }
 
 .transparency {
