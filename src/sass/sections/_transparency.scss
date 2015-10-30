@@ -200,8 +200,14 @@
 }
 
 
-// @media (max-height: rem(500)) {
-//   .transparency {
-//     @include pad(190 x x x, false);
-//   }
-// }
+@include breakpoint(xs) {
+  .transparency {
+    @include pad(260 x x x, false);
+  }
+}
+
+@include breakpoint(sm) {
+  .transparency {
+    @include pad(260 x x x, false);
+  }
+}
