@@ -44,9 +44,14 @@
 
 .nav--light {
   background-color: $gallery;
+  .nav__logo--img {
+    background-image: url('../img/logo/p--small--gray.png');
+  }
+
   .nav__logo--text {
     color: rgba($mine-shaft, 0.7);
   }
+
   .nav__highlight-item > a {
     color: $nav-light-highlight__link;
     @include on-event {

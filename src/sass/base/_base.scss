@@ -12,6 +12,12 @@
   @include container;
 }
 
+.nav__logo--img {
+  width: rem(42);
+  height: rem(41);
+  background-image: url('../img/logo/p--small.png');
+}
+
 .transparency {
   background-color: $mine-shaft--darker;
 }
