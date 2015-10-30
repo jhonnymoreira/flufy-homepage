@@ -2,11 +2,19 @@
 /// @access public
 /// @param {String} $class - apply a media query between: xs, sm, md and lg
 @mixin breakpoint($class) {
-  @if      $class == xs { @media (max-width: rem(500))  { @content; } }
-  @else if $class == sm { @media (max-width: rem(768))  { @content; } }
-  @else if $class == md { @media (max-width: rem(992))  { @content; } }
-  @else if $class == lg { @media (max-width: rem(1240)) { @content; } }
-  @else { @warn "Breakpoint mixin supports: xs, sm, md, lg"; }
+  @if $class == xs {
+    @media (max-width: rem(500)) { @content; }
+  } @else if $class == sm {
+    @media (min-width: rem(501)) and (max-width: rem(768)) { @content; }
+  } @else if $class == md {
+    @media (min-width: rem(769)) and (max-width: rem(992)) { @content; }
+  } @else if $class == lg {
+    @media (min-width: rem(993)) and (max-width: rem(1240)) { @content; }
+  } @else if $class == xl {
+    @media (min-width: rem(1241)) { @content; }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
 }
 
 /// Wrap an element in a container
@@ -17,6 +25,7 @@
 /// @param {Boolean} $center [true] - center the container or not.
 @mixin container($max-width: rem(1240), $display: null, $center: true) {
   display: $display;
+  width: 100%;
   max-width: $max-width;
   @if $display != 'inline-block' and $center {
     margin-right: auto;

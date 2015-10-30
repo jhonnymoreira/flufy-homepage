@@ -1,0 +1,101 @@
+.transparency,
+.features,
+.integration {
+  &,
+  &__container {
+    @include clearfix();
+  }
+}
+
+.transparency {
+  background-color: $mine-shaft--darker;
+}
+
+.features,
+.integration {
+  background-color: $concrete;
+}
+
+@include breakpoint(xs) {
+  .transparency,
+  .features,
+  .integration {
+    &__container {
+      @include container;
+    }
+  }
+
+  .integration {
+    border-top: rem(1) solid rgba($dove-gray, 0.2);
+  }
+}
+
+@include breakpoint(sm) {
+  .transparency,
+  .features,
+  .integration {
+    @include pad(45);
+    &__container {
+      @include container;
+    }
+  }
+
+  .integration {
+    border-top: rem(1) solid rgba($dove-gray, 0.2);
+  }
+}
+
+@include breakpoint(md) {
+  .transparency,
+  .features,
+  .integration {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    @include pad(60);
+    &__container {
+      display: table-cell;
+      width: rem(1240);
+      vertical-align: middle;
+    }
+  }
+
+  .integration {
+    border-top: rem(1) solid rgba($dove-gray, 0.2);
+  }
+}
+
+@include breakpoint(lg) {
+  .transparency,
+  .features,
+  .integration {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    @include pad(60);
+    &__container {
+      display: table-cell;
+      width: rem(1240);
+      vertical-align: middle;
+    }
+  }
+}
+
+@include breakpoint(xl) {
+  .transparency,
+  .features,
+  .integration {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    @include pad(60);
+    &__container {
+      display: table-cell;
+      width: rem(1240);
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  @include pad(5 13 3 10);
+  font-size: rem(13);
+  border-width: $border-width;
+  border-style: $border-style;
+  border-radius: $border-radius;
+  backface-visibility: hidden;
+  .ss-icon {
+    display: inline-block;
+    margin-right: rem(5);
+    font-size: rem(16);
+    vertical-align: middle;
+  }
+}
+
+.button--orange {
+  color: $main-color;
+  border-color: $main-color;
+  transition: opacity $transition-properties;
+  @include on-event {
+    opacity: 0.6;
+  }
+}

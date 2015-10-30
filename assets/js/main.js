@@ -1,0 +1,1 @@
+var nav__scrollspy=function(o,e,c){var l=document.querySelector(e).offsetTop;o=document.querySelector(o),l-=o.scrollHeight,window.onscroll=function(){var e=document.documentElement.scrollTop||document.body.scrollTop;e>=l?o.classList.add(c):o.classList.remove(c)}}(".nav",".feature","nav--light");

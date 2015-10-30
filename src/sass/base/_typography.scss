@@ -1,0 +1,80 @@
+$fonts: (
+  primary   : 'Titillium Web',
+  secondary : 'Source Sans Pro',
+);
+
+$weights: (
+  thin     : 200,
+  light    : 300,
+  regular  : 400,
+  semibold : 600,
+  bold     : 700
+);
+
+$font-style: italic;
+$text-transform: uppercase;
+
+.nav__logo--text,
+.nav__highlight-item,
+.nav__general-item,
+.transparency__title,
+.transparency__details,
+.features__title,
+.feature__title,
+.feature__details,
+.integration__title,
+.button {
+  font-family: map-get($fonts, primary);
+}
+
+.features__text,
+.integration__text {
+  font-family: map-get($fonts, secondary);
+}
+
+.nav__general-item,
+.transparency__text,
+.features__title,
+.integration__title {
+  font-weight: map-get($weights, thin);
+}
+
+.features__text,
+.feature__details,
+.integration__text, {
+  font-weight: map-get($weights, light);
+}
+
+.button__want-to,
+.button__want-to--checkout {
+  font-weight: map-get($weights, regular);
+}
+
+.nav__highlight-item,
+.transparency__title,
+.feature__title,
+.features__text .highlight,
+.integration__text .highlight,
+.button__login {
+  font-weight: map-get($weights, semibold);
+}
+
+.nav__logo--text,
+.button__want-to--checkout .highlight {
+  font-weight: map-get($weights, bold);
+}
+
+.nav__highlight-item,
+.transparency__title,
+.transparency__text,
+.button__want-to,
+.button__login {
+  font-style: $font-style;
+}
+
+.nav__highlight-item,
+.transparency__title,
+.feature__title,
+.button {
+  text-transform: $text-transform;
+}

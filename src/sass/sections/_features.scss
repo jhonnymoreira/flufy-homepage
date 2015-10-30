@@ -1,3 +1,129 @@
-.features {
-  background-color: $concrete;
+.features__text,
+.feature {
+  text-align: center;
+}
+
+.features__content,
+.features__title {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.features__content {
+  max-width: rem(530);
+  margin-bottom: rem(75);
+}
+
+.features__title {
+  max-width: rem(500);
+  font-size: rem(40);
+  text-align: center;
+  color: $dove-gray;
+  line-height: 1.33;
+}
+
+.features__text {
+  font-size: rem(18);
+  color: $dove-gray;
+}
+
+.feature__icon {
+  font-size: rem(32);
+  color: $main-color;
+}
+
+.icon--graph {
+  display: inline-block;
+  width: rem(30);
+  height: rem(31);
+  background-image: url("../img/icon/features__graph.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature__title {
+  font-size: rem(18);
+  color: rgba($dove-gray, 0.8);
+}
+
+.feature__details {
+  @include pad(10);
+  margin-bottom: 0;
+  font-size: rem(15);
+  color: rgba($dove-gray, 0.9);
+}
+
+@include breakpoint(xs) {
+  .features__content {
+    margin-bottom: rem(60);
+  }
+
+  .features__title {
+    font-size: rem(30);
+  }
+
+  .features__text {
+    font-size: rem(16);
+  }
+
+  .feature {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  .feature__title {
+    display: block;
+    margin-top: rem(5);
+    margin-bottom: 0;
+    line-height: 1.33;
+  }
+
+  .feature__details {
+    margin-top: 0;
+  }
+}
+
+@include breakpoint(sm) {
+  .features__title {
+    font-size: rem(36);
+  }
+
+  .features__text {
+    font-size: rem(16);
+  }
+
+  .feature {
+    @include j-column(1/2, $gutter: 10, $cycle: 2);
+    &:first-child + & {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .features__text {
+    max-width: rem(530);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature {
+    @include j-column(1/2, $gutter: 10, $cycle: 2);
+    &:first-child + & {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  .feature {
+    @include j-column(1/4, $gutter: 5);
+  }
+}
+
+@include breakpoint(xl) {
+  .feature {
+    @include j-column(1/4, $gutter: 5);
+  }
 }

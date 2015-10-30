@@ -1,8 +1,7 @@
-.transparency,
-.features,
-.integration {
-  display: table;
-  width: 100%;
-  height: 100vh;
-  min-height: rem(500);
+@include breakpoint(xs) {
+  .transparency,
+  .features,
+  .integration {
+    @include pad(30);
+  }
 }

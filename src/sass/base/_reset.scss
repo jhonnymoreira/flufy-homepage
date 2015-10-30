@@ -1,5 +1,12 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  box-sizing: border-box;
+}
 
+* {
+  box-sizing: inherit;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -222,4 +229,12 @@ th {
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  margin: 0;
 }
